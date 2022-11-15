@@ -50,7 +50,7 @@ public class FlutterAEPEdgePlugin implements FlutterPlugin, MethodCallHandler {
   }
 
   @Override
-  public void onMethodCall(MethodCall call, Result result) {
+  public void onMethodCall(MethodCall call, final Result result) {
     if ("extensionVersion".equals(call.method)) {
       AndroidUtil.runOnUIThread(new Runnable() {
         @Override
