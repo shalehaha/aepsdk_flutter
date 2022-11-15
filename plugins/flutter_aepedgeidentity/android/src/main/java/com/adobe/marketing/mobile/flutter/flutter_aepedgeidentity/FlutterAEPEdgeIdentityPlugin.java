@@ -137,7 +137,7 @@ public class FlutterAEPEdgeIdentityPlugin implements FlutterPlugin, MethodCallHa
   private void handleGetIdentities(final MethodChannel.Result result) {
     Identity.getIdentities(new AdobeCallbackWithError<IdentityMap>() {
         @Override
-        public void call(IdentityMap map) {
+        public void call(final IdentityMap map) {
             AndroidUtil.runOnUIThread(new Runnable() {
                 @Override
                 public void run() {
